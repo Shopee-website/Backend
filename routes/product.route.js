@@ -13,10 +13,13 @@ router.get('/:id', ProductApiControllers.getProductById)
 
 router.get('/category/:id', ProductApiControllers.getProductByCategoryId)
 
-// router.post('/', uploadImage("product_images").array("images", 20), ProductApiControllers.createNewProduct)
+var imageNames = [];
 
-router.post('/',  ProductApiControllers.createNewProduct)
-
+router.post('/', uploadImage("product_images", imageNames).array("images", 20), (req,res) => {
+    req.body.images = imageNames
+    ProductApiControllers.createNewProduct(req,res)
+    imageNames = []
+})
 
 router.patch('/:id', ProductApiControllers.updateById)
 

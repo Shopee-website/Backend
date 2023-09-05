@@ -202,6 +202,20 @@ async function create(request, response) {
             discount : request.body.discount,
         }
 
+        // const newProduct = {
+        //     category_id : 1,
+        //     product_name : "123",
+        //     price : 1234,
+        //     description : "ưeqwe",
+        //     likes : 0,
+        //     star : 0,
+        //     quan_sold : 0,
+        //     quan_in_stock : 1234,
+        //     origin : "Viet nam",
+        //     fromCity : "Ha noi",
+        //     isMall : true,
+        //     discount : 10,
+        // }
         
         const images  = request.body.images
         const details = request.body.details
@@ -230,12 +244,9 @@ async function create(request, response) {
 
         const dbNewProduct = await addNewProduct(newProduct)
         
-        // console.log("id : " + dbNewProduct.id)
-        
-        
-        for(var imageInfo in images){
+        for(let i = 0 ; i < images.length; i++){
             const newImage = {
-                image : imageInfo,
+                image : process.env.WEB_URL + "/images/product_images/" + images[i],
                 product_id : dbNewProduct.id
             }
 
@@ -251,8 +262,6 @@ async function create(request, response) {
 
             await addProductImage(newImage)
         }
-
-        console.log(4)
 
         for(var i = 0; i < details.length; i++){
             const newProductDetail = {
