@@ -28,7 +28,7 @@ const productSchema = {
     likes : {type : 'number', optional : true},
     star : {type : 'number',min : 0, max : 5, optional : true},
     quan_sold : {type : 'number', min : 0, optional : true},
-    quan_in_stock : {type : 'number',  min : 0},
+    quan_in_stock : {type : 'number',  min : 0, optional : true},
     origin : {type : 'string',optional : true},
     fromCity : {type : 'string', optional : true},
     isMall : {type : 'boolean', optional : true},
