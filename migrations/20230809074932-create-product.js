@@ -11,7 +11,7 @@ module.exports = {
                 type: Sequelize.INTEGER,
             },
             category_id: {
-                allowNull : false,
+                allowNull : true,
                 type: Sequelize.INTEGER,
             },
             product_name: {
@@ -39,6 +39,7 @@ module.exports = {
             },
             quan_in_stock: {
                 type: Sequelize.INTEGER,
+                defaultValue : 0,
             },
             origin: {
                 type: Sequelize.STRING,
