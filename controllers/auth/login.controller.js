@@ -30,7 +30,7 @@ async function login(req, res) {
       { id: user.id, email: user.email, isAdmin: user.isAdmin },
       process.env.JWT_SECRET_KEY,
       {
-        expiresIn: "1h",
+        expiresIn: "5h",
       }
     );
 

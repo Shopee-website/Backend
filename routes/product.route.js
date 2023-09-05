@@ -1,6 +1,7 @@
 const express = require('express');
 const ProductApiControllers = require('../controllers/api/product.controller')
 const router = express.Router();
+const {uploadImage} = require('../middleware/uploadImage') 
 
 router.get('/', ProductApiControllers.getListProduct)
 
@@ -12,7 +13,10 @@ router.get('/:id', ProductApiControllers.getProductById)
 
 router.get('/category/:id', ProductApiControllers.getProductByCategoryId)
 
-router.post('/', ProductApiControllers.createNewProduct)
+// router.post('/', uploadImage("product_images").array("images", 20), ProductApiControllers.createNewProduct)
+
+router.post('/',  ProductApiControllers.createNewProduct)
+
 
 router.patch('/:id', ProductApiControllers.updateById)
 

@@ -192,9 +192,9 @@ async function create(request, response) {
             product_name : request.body.product_name,
             price : request.body.price,
             description : request.body.description,
-            likes : request.body.likes,
-            star : request.body.star,
-            quan_sold : request.body.quan_sold,
+            likes : 0,
+            star : 0,
+            quan_sold : 0,
             quan_in_stock : request.body.quan_in_stock,
             origin : request.body.origin,
             fromCity : request.body.fromCity,
@@ -202,24 +202,26 @@ async function create(request, response) {
             discount : request.body.discount,
         }
 
+        
         const images  = request.body.images
         const details = request.body.details
-
+        
         if(images.length === 0)
         {
             return response.status(400).json({
                 message : "Image not found"
             })
         }   
-
+        
         if(details.length === 0)
         {
             return response.status(400).json({
                 message : "product details not found"
             })
         }
-
+        
         const validateResponse = validators.validateProduct(newProduct);
+        
         if (validateResponse !== true)
             return response.status(400).json({
                 message: `validation failed!`,
@@ -227,16 +229,18 @@ async function create(request, response) {
         });
 
         const dbNewProduct = await addNewProduct(newProduct)
-
+        
         // console.log("id : " + dbNewProduct.id)
-
+        
+        
         for(var imageInfo in images){
             const newImage = {
                 image : imageInfo,
                 product_id : dbNewProduct.id
             }
 
-            const validateResponseImage = validators.validateImage(newImage)
+            const validateResponseImage = validators.validateProductImage(newImage)
+            
             if(validateResponseImage !== true)
             {
                 return response.status(400).json({
@@ -247,6 +251,8 @@ async function create(request, response) {
 
             await addProductImage(newImage)
         }
+
+        console.log(4)
 
         for(var i = 0; i < details.length; i++){
             const newProductDetail = {
