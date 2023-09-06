@@ -4,7 +4,7 @@ const validators = require(process.cwd() + "/helpers/validators");
 
 const jwt = require("jsonwebtoken");
 
-require('dotenv').config();
+require("dotenv").config();
 
 async function getUserById(request, response) {
     try {
@@ -34,10 +34,10 @@ async function updateAva(request, response) {
 
         const userID = decode.id;
 
-        if(request.body.image)
+        if (request.body.image)
             return response.status(401).json({
-                message : "Can't find photo to change"
-            })
+                message: "Can't find photo to change",
+            });
 
         const updateUser = {
             avatar_url:
