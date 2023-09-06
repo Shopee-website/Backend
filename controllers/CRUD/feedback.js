@@ -57,10 +57,15 @@ async function showAllReview() {
   });
 }
 
+async function showById(id) {
+  return await models.FeedBack.findByPk(id);
+}
+
 module.exports = {
   getAllByProctId: getAllByProctId,
   addNewFeedBack: create,
   updateFeedBackById: update,
   softDeleteFeedBackById: destroy,
   showAllReview: showAllReview,
+  showFeedbackById: showById,
 };
