@@ -1,26 +1,42 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "admin",
-    "database": "shopee",
-    "port": 5432,
-    "host": "127.0.0.1",
-    "dialect": "postgres",
-    "timezone": "+07:00",
-    "logging":false
+      "username": "postgres",
+      "password": "admin",
+      "database": "shopee",
+      "port": 5432,
+      "host": "127.0.0.1",
+      "dialect": "postgres",
+      "timezone": "+07:00",
+      "logging": false
   },
   "test": {
-    "username": "postgres",
-    "password": null,
-    "database": "shopee",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+      "username": "default",
+      "password": "bwk9TACF1GPM",
+      "database": "verceldb",
+      "host": "ep-winter-hall-91960670-pooler.us-east-1.postgres.vercel-storage.com",
+      "port": "5432",
+      "dialect": "postgres",
+      "dialectOptions": {
+          "ssl": {
+              "require": true,
+              "rejectUnauthorized": false
+          }
+      },
+      "migrationStorageTableName": "sequelize_meta"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "shopee",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+      "username": "default",
+      "password": "bwk9TACF1GPM",
+      "database": "verceldb",
+      "host": "ep-winter-hall-91960670-pooler.us-east-1.postgres.vercel-storage.com",
+      "port": "5432",
+      "dialect": "postgres",
+      "dialectOptions": {
+          "ssl": {
+              "require": true,
+              "rejectUnauthorized": false
+          }
+      },
+      "migrationStorageTableName": "sequelize_meta"
   }
 }
