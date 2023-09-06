@@ -16,7 +16,7 @@ module.exports = {
                 {
                     product_id: 1,
                     size: "Size S",
-                    color: "Màu Đen ",
+                    color: "Màu Đen",
                     quan_in_stock: 417,
                 },
                 {
@@ -148,7 +148,7 @@ module.exports = {
                 {
                     product_id: 4,
                     size: "Size S",
-                    color: "Màu Đen ",
+                    color: "Màu Đen",
                     quan_in_stock: 417,
                 },
                 {
@@ -316,7 +316,7 @@ module.exports = {
                 {
                     product_id: 8,
                     size: "Size S",
-                    color: "Màu Đen ",
+                    color: "Màu Đen",
                     quan_in_stock: 417,
                 },
                 {
@@ -1662,7 +1662,7 @@ module.exports = {
                 {
                     product_id: 21,
                     size: "Size S",
-                    color: "Màu Đen ",
+                    color: "Màu Đen",
                     quan_in_stock: 417,
                 },
                 {
@@ -1794,7 +1794,7 @@ module.exports = {
                 {
                     product_id: 24,
                     size: "Size S",
-                    color: "Màu Đen ",
+                    color: "Màu Đen",
                     quan_in_stock: 417,
                 },
                 {
@@ -1962,7 +1962,7 @@ module.exports = {
                 {
                     product_id: 28,
                     size: "Size S",
-                    color: "Màu Đen ",
+                    color: "Màu Đen",
                     quan_in_stock: 417,
                 },
                 {
