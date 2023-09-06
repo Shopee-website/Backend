@@ -7,6 +7,7 @@ const {
     getCartByUserIdAndPDID,
     softDeleteCartById,
 } = require("../CRUD/cart");
+const { Op } = require('sequelize');
 
 const jwt = require("jsonwebtoken");
 const models = require(process.cwd() + "/models");
@@ -44,6 +45,7 @@ async function add(request, response) {
             where: {
                 user_id: decode.id,
                 product_detail_id: request.body.product_detail_id,
+                deletedAt : {[Op.eq] : null}
             },
         });
 
