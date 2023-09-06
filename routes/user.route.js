@@ -1,7 +1,7 @@
 const express = require("express");
 const userController = require("../controllers/api/user.controller");
 const checkRoleMiddleware = require("../middleware/check-role");
-const {uploadImage} = require("../middleware/uploadImage");
+const {uploadImage} = require("../helpers/uploads");
 
 const router = express.Router();
 

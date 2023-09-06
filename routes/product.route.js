@@ -1,7 +1,7 @@
 const express = require('express');
 const ProductApiControllers = require('../controllers/api/product.controller')
 const router = express.Router();
-const {uploadImage} = require('../middleware/uploadImage'); 
+const {uploadImage} = require('../helpers/uploads'); 
 const productController = require('../controllers/api/product.controller');
 
 router.get('/', ProductApiControllers.getListProduct)
