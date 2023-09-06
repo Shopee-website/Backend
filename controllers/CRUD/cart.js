@@ -15,7 +15,7 @@ const include = [
                         required: true,
                     }
                 ],
-                attributes: ['product_name','price','discount'],
+                attributes: ['product_name','price','discount','deletedAt'],
                 required: true,
             },
         ],
@@ -47,8 +47,6 @@ async function update(updateCart, id) {
 
     updateCart['total_price'] = updateCart.quantity* cartDetail.ProductDetail.Product.price * (1 - cartDetail.ProductDetail.Product.discount / 100)
 
-    // console.log(updateCart, id)
-
     return models.Cart.update(updateCart, { 
         where: {
             id: id,
@@ -69,7 +67,11 @@ async function destroy(id) {
 
 async function getAllByUserId(userId){
     return await models.Cart.findAll({
-        where: {user_id: userId, deletedAt : {[Op.eq] : null}},
+        where: {
+            user_id: userId, 
+            deletedAt : {[Op.eq] : null},
+            "$ProductDetail.Product.deletedAt$" : {[Op.eq] :null},
+        },
         include: include,
     })
 }
