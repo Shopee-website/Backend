@@ -83,7 +83,7 @@ async function getAllProduct(request, response) {
   }
 }
 
-async function updateUserById(request, response) {
+async function updateUser(request, response) {
   try {
     const userId = request.body.user_id;
 
@@ -160,6 +160,6 @@ module.exports = {
   getAllUser: getAllUser,
   getAllReview: getAllReview,
   getAllProduct: getAllProduct,
-  updateUserById: updateUserById,
+  updateUser: updateUser,
   deleteUserById: deleteUserById,
 };

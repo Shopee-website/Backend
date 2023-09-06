@@ -13,7 +13,7 @@ router.get(
 router.patch(
   "/update-profile",
   checkRoleMiddleware.checkRoleUser,
-  userController.updateUserById
+  userController.updateUser
 );
 
 module.exports = router;

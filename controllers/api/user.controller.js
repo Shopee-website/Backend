@@ -24,7 +24,7 @@ async function getUserById(request, response) {
   }
 }
 
-async function updateUserById(request, response) {
+async function updateUser(request, response) {
   try {
     const token = request.headers.authorization.split(" ")[1];
 
@@ -67,5 +67,5 @@ async function updateUserById(request, response) {
 
 module.exports = {
   getUserById: getUserById,
-  updateUserById: updateUserById,
+  updateUser: updateUser,
 };

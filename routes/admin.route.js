@@ -39,7 +39,7 @@ router.delete(
 router.patch(
   "/update-user",
   checkRoleMiddleware.checkRoleAdmin,
-  adminController.updateUserById
+  adminController.updateUser
 );
 
 router.delete(
