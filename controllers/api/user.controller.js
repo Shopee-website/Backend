@@ -37,14 +37,12 @@ async function updateAva(request, response) {
     };
 
     updateUserById(updateUser, userID);
-
     return response.status(200).json({
       message: "Change avatar successfull",
-      profile: profile,
     });
   } catch (error) {
     return response.status(500).json({
-      message: "Something went wrong",
+      message: "Something went wrong when update avatar",
       error: error,
     });
   }
