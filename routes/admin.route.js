@@ -48,4 +48,16 @@ router.delete(
   adminController.deleteUserById
 );
 
+router.patch(
+  "/update-feedback",
+  checkRoleMiddleware.checkRoleAdmin,
+  adminController.updateFeedback
+);
+
+router.delete(
+  "/delete-feedback",
+  checkRoleMiddleware.checkRoleAdmin,
+  adminController.deleteFeedbackById
+);
+
 module.exports = router;
