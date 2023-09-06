@@ -14,13 +14,19 @@ router.get(
 var imageNames = [];
 
 router.patch(
-    "/update_ava",
+    "/update-ava",
     // checkRoleMiddleware.checkRoleUser,
     uploadImage("avatars", imageNames).array("images", 1),
     (req, res) => {
         req.body.image = imageNames[0];
         userController.updateAva(req,res);
     }
+);
+
+router.patch(
+  "/update-profile",
+  checkRoleMiddleware.checkRoleUser,
+  userController.updateUser
 );
 
 module.exports = router;
