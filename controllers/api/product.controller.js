@@ -1,4 +1,5 @@
 const validators = require("../../helpers/validators");
+require('dotenv').config();
 
 const {
     getListProduct,
@@ -12,6 +13,7 @@ const {
 const {
     getDetailByProductById,
     addProductDetails,
+    getProductDetailId,
 } = require("../CRUD/productDetail")
 
 const {
@@ -185,6 +187,27 @@ async function showProductInfo(request, response)
     }
 }
 
+async function showProductDetailId(request,response)
+{
+    try {
+        const productId = parseInt(request.params.productId);
+        const color = request.query.color;
+        const size = request.query.size;
+        
+        const productDetailId = await getProductDetailId(productId,color,size);
+
+        return response.status(200).json({
+            productDetailId : productDetailId.id,
+        })
+
+    } catch (error) {
+        return response.status(500).json({
+            message : "Something went wrong!",
+            error : error
+        })
+    }
+}
+
 async function create(request, response) {
     try {
         const newProduct = {
@@ -201,21 +224,6 @@ async function create(request, response) {
             isMall : request.body.isMall,
             discount : request.body.discount,
         }
-
-        // const newProduct = {
-        //     category_id : 1,
-        //     product_name : "123",
-        //     price : 1234,
-        //     description : "ưeqwe",
-        //     likes : 0,
-        //     star : 0,
-        //     quan_sold : 0,
-        //     quan_in_stock : 1234,
-        //     origin : "Viet nam",
-        //     fromCity : "Ha noi",
-        //     isMall : true,
-        //     discount : 10,
-        // }
         
         const images  = request.body.images
         const details = request.body.details
@@ -302,7 +310,6 @@ async function updateById(request, response) {
         const dbProduct = await getProductById(productId);
 
         if (dbProduct) {
-
             const updateProduct = {
                 category_id : request.body.category_id ? request.body.category_id : dbProduct.category_id,
                 product_name : request.body.product_name ? request.body.product_name : dbProduct.product_name,
@@ -376,6 +383,7 @@ module.exports = {
     getListProduct: index,
     getProductById: showById,
     getProductInfo : showProductInfo,
+    getProductDetailIdByInfo : showProductDetailId,
     createNewProduct: create,
     updateById: updateById,
     softDeleteById: softDeleteById,
