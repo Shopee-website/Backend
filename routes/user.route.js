@@ -10,4 +10,10 @@ router.get(
   userController.getUserById
 );
 
+router.patch(
+  "/update-profile",
+  checkRoleMiddleware.checkRoleUser,
+  userController.updateUser
+);
+
 module.exports = router;
