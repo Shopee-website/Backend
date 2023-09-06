@@ -15,7 +15,20 @@ async function create(newProductDetail) {
     return models.ProductDetail.create(newProductDetail);
 }
 
+async function getProductDetailId(productId, color, size)
+{
+    return models.ProductDetail.findOne({
+        where : {
+            product_id : { [Op.eq] : productId},
+            color : { [Op.eq] : color},
+            size : { [Op.eq] : size},
+        },
+        attributes : ['id'],
+    })
+}
+
 module.exports = {
     getDetailByProductById : showDetailByProductById,
-    addProductDetails : create
+    addProductDetails : create,
+    getProductDetailId : getProductDetailId,
 }

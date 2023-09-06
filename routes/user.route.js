@@ -15,7 +15,7 @@ var imageNames = [];
 
 router.patch(
     "/update-ava",
-    // checkRoleMiddleware.checkRoleUser,
+    checkRoleMiddleware.checkRoleUser,
     uploadImage("avatars", imageNames).array("images", 1),
     (req, res) => {
         req.body.image = imageNames[0];
