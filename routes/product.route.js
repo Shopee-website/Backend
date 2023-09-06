@@ -1,7 +1,8 @@
 const express = require('express');
 const ProductApiControllers = require('../controllers/api/product.controller')
 const router = express.Router();
-const {uploadImage} = require('../middleware/uploadImage') 
+const {uploadImage} = require('../middleware/uploadImage'); 
+const productController = require('../controllers/api/product.controller');
 
 router.get('/', ProductApiControllers.getListProduct)
 
@@ -12,6 +13,8 @@ router.get('/info/:id', ProductApiControllers.getProductInfo)
 router.get('/:id', ProductApiControllers.getProductById)
 
 router.get('/category/:id', ProductApiControllers.getProductByCategoryId)
+
+router.get('/findProductDetailId/:productId',ProductApiControllers.getProductDetailIdByInfo)
 
 var imageNames = [];
 

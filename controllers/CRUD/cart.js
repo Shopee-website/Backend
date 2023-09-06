@@ -69,7 +69,7 @@ async function destroy(id) {
 
 async function getAllByUserId(userId){
     return await models.Cart.findAll({
-        where: {user_id: userId },
+        where: {user_id: userId, deletedAt : {[Op.eq] : null}},
         include: include,
     })
 }

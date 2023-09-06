@@ -1,4 +1,5 @@
 "use strict";
+require('dotenv').config();
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
