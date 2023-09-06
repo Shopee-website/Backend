@@ -31,7 +31,9 @@ yarn sequelize-cli migration:generate --name demo-user
 
 -> using npm
 
-npx sequelize-cli db:migrate
+npx sequelize-cli db:migrate // auto chạy môi trường development
+
+npx sequelize db:migrate --env test --config config/config.json  // Chạy môi trường test
 
 -> using yarn
 
