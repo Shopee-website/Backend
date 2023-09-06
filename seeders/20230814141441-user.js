@@ -1,5 +1,6 @@
 "use strict";
 const hashHelper = require(process.cwd() + "/helpers/password-encrypter");
+require('dotenv').config();
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -15,7 +16,7 @@ module.exports = {
                     telephone: "0973755062",
                     address: "Number 1 in your heart",
                     avatar_url:
-                        "http://localhost:8000/images/avatars/default-avatar.png",
+                        process.env.WEB_URL + "/images/avatars/default-avatar.png",
                     password: hashHelper.hash("admin"),
                     isAdmin: true,
                 },
@@ -27,7 +28,7 @@ module.exports = {
                     telephone: "1234567890",
                     address: "123 Main St",
                     avatar_url:
-                        "http://localhost:8000/images/avatars/default-avatar.png",
+                        process.env.WEB_URL + "/images/avatars/default-avatar.png",
                     password: hashHelper.hash("user12345"),
                     isAdmin: false,
                 },
@@ -39,7 +40,7 @@ module.exports = {
                     telephone: "9876543210",
                     address: "456 Elm St",
                     avatar_url:
-                        "http://localhost:8000/images/avatars/default-avatar.png",
+                        process.env.WEB_URL + "/images/avatars/default-avatar.png",
                     password: hashHelper.hash("user12345"),
                     isAdmin: false,
                 },
@@ -51,7 +52,7 @@ module.exports = {
                     telephone: "8765432109",
                     address: "789 Oak St",
                     avatar_url:
-                        "http://localhost:8000/images/avatars/default-avatar.png",
+                        process.env.WEB_URL + "/images/avatars/default-avatar.png",
                     password: hashHelper.hash("user12345"),
                     isAdmin: false,
                 },
@@ -63,7 +64,7 @@ module.exports = {
                     telephone: "5678901234",
                     address: "101 Pine St",
                     avatar_url:
-                        "http://localhost:8000/images/avatars/default-avatar.png",
+                        process.env.WEB_URL + "/images/avatars/default-avatar.png",
                     password: hashHelper.hash("user12345"),
                     isAdmin: false,
                 },
@@ -75,7 +76,7 @@ module.exports = {
                     telephone: "5432109876",
                     address: "222 Maple St",
                     avatar_url:
-                        "http://localhost:8000/images/avatars/default-avatar.png",
+                        process.env.WEB_URL + "/images/avatars/default-avatar.png",
                     password: hashHelper.hash("user12345"),
                     isAdmin: false,
                 },
@@ -87,7 +88,7 @@ module.exports = {
                     telephone: "9876123450",
                     address: "333 Cedar St",
                     avatar_url:
-                        "http://localhost:8000/images/avatars/default-avatar.png",
+                        process.env.WEB_URL + "/images/avatars/default-avatar.png",
                     password: hashHelper.hash("user12345"),
                     isAdmin: false,
                 },
@@ -99,7 +100,7 @@ module.exports = {
                     telephone: "4321098765",
                     address: "444 Birch St",
                     avatar_url:
-                        "http://localhost:8000/images/avatars/default-avatar.png",
+                        process.env.WEB_URL + "/images/avatars/default-avatar.png",
                     password: hashHelper.hash("user12345"),
                     isAdmin: false,
                 },
@@ -111,7 +112,7 @@ module.exports = {
                     telephone: "8765432109",
                     address: "555 Oak St",
                     avatar_url:
-                        "http://localhost:8000/images/avatars/default-avatar.png",
+                        process.env.WEB_URL + "/images/avatars/default-avatar.png",
                     password: hashHelper.hash("user12345"),
                     isAdmin: false,
                 },
@@ -123,7 +124,7 @@ module.exports = {
                     telephone: "9876543210",
                     address: "666 Elm St",
                     avatar_url:
-                        "http://localhost:8000/images/avatars/default-avatar.png",
+                        process.env.WEB_URL + "/images/avatars/default-avatar.png",
                     password: hashHelper.hash("user12345"),
                     isAdmin: false,
                 },
