@@ -213,7 +213,7 @@ async function create(request, response) {
         const newProduct = {
             category_id : request.body.category_id,
             product_name : request.body.product_name,
-            price : request.body.price,
+            price : parseInt(request.body.price),
             description : request.body.description,
             likes : 0,
             star : 0,
@@ -224,17 +224,10 @@ async function create(request, response) {
             isMall : request.body.isMall,
             discount : request.body.discount,
         }
+
         
-        const images  = request.body.images
         const details = request.body.details
-        
-        if(images.length === 0)
-        {
-            return response.status(400).json({
-                message : "Image not found"
-            })
-        }   
-        
+
         if(details.length === 0)
         {
             return response.status(400).json({
@@ -249,27 +242,7 @@ async function create(request, response) {
                 message: `validation failed!`,
                 error: validateResponse,
         });
-
         const dbNewProduct = await addNewProduct(newProduct)
-        
-        for(let i = 0 ; i < images.length; i++){
-            const newImage = {
-                image : process.env.WEB_URL + "/images/product_images/" + images[i],
-                product_id : dbNewProduct.id
-            }
-
-            const validateResponseImage = validators.validateProductImage(newImage)
-            
-            if(validateResponseImage !== true)
-            {
-                return response.status(400).json({
-                    message : "validation image failed",
-                    error : validateResponseImage
-                })
-            }
-
-            await addProductImage(newImage)
-        }
 
         for(var i = 0; i < details.length; i++){
             const newProductDetail = {
@@ -294,6 +267,51 @@ async function create(request, response) {
         return response.status(200).json({
             message : "Create product successfull!",
             id : dbNewProduct.id,
+        })
+
+    } catch (error) {
+        return response.status(500).json({
+            message: "Something went wrong!",
+            error: error,
+        });
+    }
+}
+
+async function createProductPictures(request, response) {
+    try {
+        const productId = parseInt(request.body.productId);
+        const images  = request.body.images
+        
+
+        if(images.length === 0)
+        {
+            return response.status(400).json({
+                message : "Image not found"
+            })
+        }   
+
+        for(let i = 0 ; i < images.length; i++){
+            const newImage = {
+                image : process.env.WEB_URL + "/images/product_images/" + images[i],
+                product_id : productId
+            }
+
+            const validateResponseImage = validators.validateProductImage(newImage)
+
+            if(validateResponseImage !== true)
+            {
+                return response.status(400).json({
+                    message : "validation image failed",
+                    error : validateResponseImage
+                })
+            }
+
+            await addProductImage(newImage)
+        }
+        
+
+        return response.status(200).json({
+            message : "Create product's pictures successfull!",
         })
 
     } catch (error) {
@@ -385,6 +403,7 @@ module.exports = {
     getProductInfo : showProductInfo,
     getProductDetailIdByInfo : showProductDetailId,
     createNewProduct: create,
+    createNewProductPictures : createProductPictures,
     updateById: updateById,
     softDeleteById: softDeleteById,
 };

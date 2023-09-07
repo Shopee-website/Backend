@@ -18,9 +18,11 @@ router.get('/findProductDetailId/:productId',ProductApiControllers.getProductDet
 
 var imageNames = [];
 
-router.post('/', uploadImage("product_images", imageNames).array("images", 20), (req,res) => {
+router.post('/',ProductApiControllers.createNewProduct)
+
+router.post('/addPictures', uploadImage("product_images", imageNames).array("images", 20), (req,res) => {
     req.body.images = imageNames
-    ProductApiControllers.createNewProduct(req,res)
+    ProductApiControllers.createNewProductPictures(req,res)
     imageNames.splice(0, imageNames.length);
 })
 
