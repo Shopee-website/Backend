@@ -20,6 +20,7 @@ router.patch(
   (req, res) => {
     req.body.image = imageNames[0];
     userController.updateAva(req, res);
+    imageNames = []
   }
 );
 
