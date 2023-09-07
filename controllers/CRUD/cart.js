@@ -73,6 +73,10 @@ async function getAllByUserId(userId){
             "$ProductDetail.Product.deletedAt$" : {[Op.eq] :null},
         },
         include: include,
+        order : [
+            ["createdAt" , "DESC"],
+            ["total_price", "DESC"],
+        ]
     })
 }
 

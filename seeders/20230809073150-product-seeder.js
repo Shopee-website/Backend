@@ -89,7 +89,7 @@ module.exports = {
                     product_name:
                         "Quần Short unisex nam nữ chất cotton cao cấp, phong cách thể thao, mặc thoáng mát, co dãn 4 chiều, quần đùi nam nữ, basic",
                     price: 48000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
 
                 Quần Short trơn và Quần Short Comp chất tổ ong cao cấp
                 
@@ -231,7 +231,7 @@ module.exports = {
                     product_name:
                         "Quần Short unisex nam nữ chất cotton cao cấp, phong cách thể thao, mặc thoáng mát, co dãn 4 chiều, quần đùi nam nữ, basic",
                     price: 48000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
 
                 Quần Short trơn và Quần Short Comp chất tổ ong cao cấp
                 
@@ -373,7 +373,7 @@ module.exports = {
                     product_name:
                         "Quần Short unisex nam nữ chất cotton cao cấp, phong cách thể thao, mặc thoáng mát, co dãn 4 chiều, quần đùi nam nữ, basic",
                     price: 48000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
 
                 Quần Short trơn và Quần Short Comp chất tổ ong cao cấp
                 
@@ -439,7 +439,7 @@ module.exports = {
                     product_name:
                         "Áo Polo Teelab Special chất cá sấu thoáng mát co dãn 4c , áo thun có cổ local brand nam nữ unisex form rộng",
                     price: 89000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
           - Chất liệu: TC cá sấu
           
           - Form: Cơ bản
@@ -485,7 +485,7 @@ module.exports = {
                     category_id: 2,
                     product_name: "Ốp lưng chống sốc iPhone 6 6s 6plus 6splus 7 7plus 8plus x xs xsmax 11 12 13 14 pro max promax trong suốt chống va đập",
                     price: 11000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     Ốp lưng iphone 5/5s/6/6plus/6s/6s plus/6/7/7plus/8/8plus/x/xs/xs max/11/11 pro/11 promax
                     
                     PKĐỏ đảm bảo:
@@ -493,7 +493,7 @@ module.exports = {
                     - Nếu hàng bị lỗi do sản xuất.  cam kết sẽ hoàn tiền hoặc gửi lại sản mới thay thế cho quý khách.
                     - Thương hiệu tạo niềm tin!
                     
-                    Mô tả sản phẩm:
+                    :
                     - Thiết kế: Bo khít máy
                     - Chất liệu: Nhựa dẻo
                     - Dòng máy tương thích: Ốp iphone 5/5s/6/6plus/6s/6s plus/6/7/7plus/8/8plus/x/xs/xs max/11/11 pro/11 promax
@@ -517,7 +517,7 @@ module.exports = {
                     category_id: 2,
                     product_name: "Ốp Điện Thoại Acrylic Trong Suốt Chống Sốc Cho iPhone 14 11 12 13 Pro Max XS Max X XR",
                     price: 26000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     💕 (^ _-) Chào mừng bạn đến với WUJU Enterprise Store!😊
 
                     💕 (^ _-) Chúng tôi là một nhà sản xuất chuyên nghiệp! Chất lượng sản phẩm, dịch vụ và giá cả được đảm bảo!
@@ -621,7 +621,7 @@ module.exports = {
                     category_id: 2,
                     product_name: "【VẬN CHUYỂN NHANH】ốp lưng điẹn thoại màu tím đậm mới phi hành gia dễ thương cho iphone 11 12 13 14 Pro Max",
                     price: 30000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     FreeShip toàn quốc cho đơn hàng từ 50k ( Tối Đa 30K ) - nhập mã Freeship của shopee vào nhé 
                    
                    Chào mừng bạn đến với cửa hàng gongonshop
@@ -669,8 +669,8 @@ module.exports = {
                     category_id: 2,
                     product_name: "Ốp Điện Thoại TPU Mềm Trong Suốt Chống Sốc Chống Bụi Tương Thích Cho IPhone 14 13 12 11 Pro Max X XR 8 7 Plus Xs Max",
                     price: 89000,
-                    description: `MÔ TẢ SẢN PHẨM
-                    Mô tả sản phẩm &gt;&gt;&gt;
+                    description: `
+                     &gt;&gt;&gt;
 
                     【Vỏ Tpu bền】
                     
@@ -762,7 +762,7 @@ module.exports = {
                     category_id: 2,
                     product_name: "Ốp Điện Thoại Thời Trang Cho iPhone 14 13 12 11 6 6s 7 8 Plus X Xr Xs Max 11 12 Pro Max SE 2020",
                     price: 11900,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     ⭐Thương hiệu: glow_worm⭐ Vỏ cho iPhone 14 13 12 11 6 6s 7 8 Plus X Xr Xs Max 11 12 Pro Max SE 2020 Vỏ điện thoại >>>>>>> Thông báo <<<<<<<< 🌸Nếu bạn nhận được sản phẩm bị hỏng, vui lòng liên hệ với chúng tôi và chúng tôi sẽ gửi cho bạn voucher tốt nhất để bồi thường 🌸Vui lòng đảm bảo địa chỉ / số điện thoại / kiểu điện thoại của bạn là chính xác vì chúng tôi không thể thay đổi thông tin 🌸Bạn có thể tìm kiếm model điện thoại của mình trong cửa hàng của chúng tôi để xem thêm nhiều kiểu dáng 🌸Hoan nghênh bạn theo dõi cửa hàng của chúng tôi để nhận được chiết khấu hấp dẫn nhất 🌸Hoan nghênh khách hàng thân mến, liên hệ với chúng tôi trước khi đặt hàng để nhận được nhiều voucher mua sắm hấp dẫn hơn >>>>>>> Thông tin sản phẩm <<<<<<<< 🌸Đặc trưng: Chống trầy xước 🌸Các tính năng: Dễ dàng cài đặt 🌸Bảo vệ điện thoại của bạn khỏi bụi bẩn, trầy xước và va đập. 🌸Gói bao gồm: 1 * chiếc trường hợp 🌸Hàng mới 100% 🌸Vừa vặn với điện thoại của bạn >>>>>>> Thông tin vận chuyển <<<<<<<< 🌸Đơn hàng sẽ được vận chuyển trong vòng 2 ngày 🌸Tất cả các sản phẩm được do nền tảng SHOPEE vận chuyển 🌸Cod có sẵn 🌸Tất cả các sản phẩm đều có KHO SN SÀNG`,
                     likes: 2300,
                     star: 4.5,
@@ -778,7 +778,7 @@ module.exports = {
                     category_id: 2,
                     product_name: "Ốp Điện Thoại Acrylic Cứng Trong Suốt Chống Sốc Có Nút Kim Loại Bảo Vệ Camera Cho iPhone 14 Pro Max 13 Pro Max 12 11 7Plus 6sPlus 8Plus",
                     price: 40000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     ⭐Mẫu mã chất lượng siêu cao! 
                     
                      ⭐Tất cả các sản phẩm có trong kho!
@@ -838,7 +838,7 @@ module.exports = {
                     category_id: 2,
                     product_name: "Ốp da iphone hình Ferrari THT cho Iphone 6plus 7plus x/xsmax/11/12/13/14/Pro/Promax",
                     price: 45000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     Ốp Lưng Da iPhone Chính Hãng THT  
                     Cho 6plus/7plus/x/xsmax11/11Promax/12/12Pro/12ProMax/13/13Pro/13ProMax/14P/ProMax sang trọng
                     
@@ -900,7 +900,7 @@ module.exports = {
                     category_id: 2,
                     product_name: "Ốp Điện Thoại Da Cừu Mềm Chống Sốc Họa Tiết Mặt Cười Cho iphone 14 promax 14 pro 14 Plus 11 12 13 / 6 / 7 / 8plus / X max",
                     price: 36000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     Phong cách: Bao gồm tất cả
                     
                     Chất liệu: Da giả
@@ -964,7 +964,7 @@ module.exports = {
                     category_id: 2,
                     product_name: "Ốp viền vuông gấu hở logo táo Bảo vệ camera, Cho iphone 7/8/x/xsmax/11/12/13/Pro/Promax/Plus",
                     price: 25000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     THTOFFICIAL
                     - Tự hào là chuỗi cửa hàng lớn và  phân phối sỉ  tại khắp các tỉnh trên cả nước Hà Nội,TP HCM,  Hải Phòng, Quảng Ninh, Ninh Bình, Phú Thọ, Nam Định ….
                     - Uy tín đã được đảm bảo với hàng nghìn, hàng vạn đơn trên khắp cả nước 
@@ -979,7 +979,7 @@ module.exports = {
                     - Bao ae check test trong vòng một tuần ko thích trả lại, hoàn tiền 100% 
                     ✅ Ship nội thành hoả tốc có ngay. Ae ở Hà Nội bây giờ đã có AHA khi bạn đặt hàng nhớ chọn đón vị vận chuyển HỎA TỐC bạn sẽ nhận được hàng ngay (NHẮN TIN BÁO SHOP) 
                     -----------------------------------------------------------------------------------------
-                    MÔ TẢ SẢN PHẨM
+                    
                      Ốp Gấu Bearbrick 3D hở táo iphone 7plus 8plus   X Xs Xsmax 11 promax 12 12promax 13 pro max trong suốt bảo vệ camera silicon 
                     
                      Thông tin sản phẩm: 
@@ -1008,7 +1008,7 @@ module.exports = {
                     category_id: 2,
                     product_name: "Ốp Điện Thoại Da Cừu Mềm Chống Sốc Hình Trái Tim Cho iphone 14 pro 14 promax 11 12 pro max 13 / 6 / 7 / 8plus / X max",
                     price: 89000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     Dành cho thương hiệu: Apple
                     
                     Phong cách: Bao gồm tất cả
@@ -1074,7 +1074,7 @@ module.exports = {
                     category_id: 3,
                     product_name: "Áo giữ nhiệt nữ CÓ LÓT NỈ cổ cao 3P dáng ôm dày dặn co giãn - NhiNhi Shop",
                     price: 19000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     THÔNG TIN VỀ SẢN PHẦM
                     - Áo giữ nhiệt dài 52cm
                     - Co giãn khá tốt, free size cho các bạn từ 40-55kg tùy chiều cao
@@ -1106,7 +1106,7 @@ module.exports = {
                     category_id: 3,
                     product_name: "Áo thun body cổ vuông dáng croptop, Áo kiểu dáng ôm sexxy cổ U AT6428 - NhiNhi Shop",
                     price: 59000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     THÔNG TIN VỀ SẢN PHẨM
                     - Kích thước: Free Size (Tối đa 57kg- Tùy chiều cao)
                     - Chất liệu: Thun bozip co giãn
@@ -1135,7 +1135,7 @@ module.exports = {
                     category_id: 3,
                     product_name: "Áo thun nữ trơn cổ tim form dài dấu quần, Áo phông ngắn tay dáng rộng AT1128 - NhiNhiShop",
                     price: 89000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     THÔNG TIN VỀ SẢN PHẨM
                     - Kích thước:  Free Size (Tối đa 70kg - Tùy chiều cao)
                     - Chất liệu: Thun trơn co giãn
@@ -1168,7 +1168,7 @@ module.exports = {
                     category_id: 3,
                     product_name: "Rẻ Vô Địch Quần xuông cạp trơn đen , quần ống rộng trơn uzzlang",
                     price: 89000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
 
                     ❄️Mã này hàng lên bao nhiêu vẫn không đủ cung cấp í 
                     ❄️Năm nay xưởng vẫn lên mẫu phục vụ mọi người nhé.
@@ -1205,8 +1205,8 @@ module.exports = {
                     category_id: 3,
                     product_name: "Áo Thun AD Nam Nữ Form Rộng EDDIE BAUER Cotton Unisex 2 Màu Ulzzang ATV05",
                     price: 65000,
-                    description: `MÔ TẢ SẢN PHẨM
-                    MÔ TẢ SẢN PHẨM
+                    description: `
+                    
                     THÔNG TIN SẢN PHẨM: 
                     Áo Thun Nam Nữ Unisex Tay Lỡ Form Rộng Đẹp Giá Rẻ Cổ Tròn Màu Đen / Áo Phông Nam Nữ Unisex
                     Chất liệu: thun cotton 100 co giãn dày dặn DÀY MỀM MỊN MÁT không xù lông. Form áo rộng chuẩn TAY LỠ UNISEX cực đẹp.
@@ -1227,7 +1227,7 @@ module.exports = {
                     - Áo thun form rộng dễ dàng phối đồ, thời trang phong cách Hàn Quốc.
                     
                     Khách hàng có thể an tâm khi mua hàng tại Legend - Thời trang Unisex:
-                    + Cam kết về chất lượng sản phẩm, Shop cam kết cả về CHẤT LIỆU cũng như HÌNH ẢNH (đúng với những gì được nêu bật trong phần mô tả sản phẩm).
+                    + Cam kết về chất lượng sản phẩm, Shop cam kết cả về CHẤT LIỆU cũng như HÌNH ẢNH (đúng với những gì được nêu bật trong phần ).
                     + Giá thành thấp nhất thị trường và được bảo hành theo quy định với từng sản phẩm, được đổi trả hàng lỗi trong vòng 7 ngày kể từ khi mua hàng.
                     ✔️ Thông tin cảnh báo: Không có
                     ✔️ Năm sản xuất: 2022
@@ -1255,7 +1255,7 @@ module.exports = {
                     category_id: 3,
                     product_name: "Áo phông Raglan form rộng chất vải tổ ong -Maylinh shop - Áo thun tay lỡ nam nữ đều mặc được",
                     price: 89000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     Áo phông Raglan form rộng chất vải tổ ong -Maylinh shop - Áo thun tay lỡ nam nữ đều mặc được
                     
                     ⚜️ THÔNG TIN SẢN PHẨM
@@ -1285,7 +1285,7 @@ module.exports = {
                     
                     ⚜️ Quyền Lợi của Khách Hàng khi mua hàng shop tại shop:
                     
-                    ✔ Nếu sản phẩm khách nhận được không đúng với sản phẩm khách đặt, hoặc không đúng với mô tả sản phẩm. Khách hàng đừng vội đánh giá 1⭐. Hãy inbox lại cho shop. Chúng tôi xin lắng nghe và giải quyết.
+                    ✔ Nếu sản phẩm khách nhận được không đúng với sản phẩm khách đặt, hoặc không đúng với . Khách hàng đừng vội đánh giá 1⭐. Hãy inbox lại cho shop. Chúng tôi xin lắng nghe và giải quyết.
                     
                      Shop không hi vọng trường hợp này xảy ra, và sẽ cố gắng hết sức để bạn không có một trải nghiệm mua hàng không tốt tại shop. Nhưng nếu có shop sẽ giải quyết mọi chuyện sao cho thỏa đáng nhất.
                     
@@ -1306,7 +1306,7 @@ module.exports = {
                     category_id: 3,
                     product_name: "Áo Sơ Mi Chất Bò Cúc Cài Tay Lỡ Form Rộng Dáng Ngắn Nam Nữ",
                     price: 89000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     Áo Sơ Mi Chất Bò Cúc Cài Tay Lỡ Form Rộng Dáng Ngắn Nam Nữ
                     
                     Form: Freesize, form rộng 40-75kg mặc oke
@@ -1329,7 +1329,7 @@ module.exports = {
                     category_id: 3,
                     product_name: "Áo thun local brand love you 300k special , áo phông nam nữ form rộng , tee oversize unisex màu kem - gin store",
                     price: 89000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
 
                     Áo thun local brand love you 300k special , áo phông nam nữ form rộng , tee oversize unisex màu kem - gin store
                     
@@ -1380,8 +1380,8 @@ module.exports = {
                     category_id: 3,
                     product_name: "Tee basic ss1 CREWZ áo thun tay lỡ unisex Local Brand - AO_THUN_DVR (V427)",
                     price: 89000,
-                    description: `MÔ TẢ SẢN PHẨM
-                    👩 MÔ TẢ SẢN PHẨM 
+                    description: `
+                    👩  
                     
                     - Áo thun nam nữ oversize sử dụng chất vải cotton 65/35 co giãn 4 chiều. Là loại vải có đặc điểm mềm mịn, độ co giãn cao, khả năng thấm hút tốt và được dệt hoàn toàn từ sợi cây bông tự nhiên. Chất vải cotton cực kỳ thân thiện với làn da.
                     
@@ -1424,7 +1424,7 @@ module.exports = {
                     category_id: 3,
                     product_name: "Áo thun 3158 chất cotton khô thoáng mát, form rộng tay lỡ THE ONE freesize < 60kg",
                     price: 89000,
-                    description: `MÔ TẢ SẢN PHẨM
+                    description: `
                     Áo thun 3158 chất cotton khô thoáng mát, form rộng tay lỡ  THE ONE  freesize < 60kg
                     Áo thun nữ form rộng phù hợp với các bạn dưới 60kg trở xuống nhé
                     Chất cotton dày dặn  co giãn thoải mái vận động

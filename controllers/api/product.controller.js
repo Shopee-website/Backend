@@ -46,7 +46,7 @@ async function index(request, response) {
             let element = queryResult.rows[i];
             // Process Sale price
             if(element.dataValues.discount > 0)
-                element.dataValues.salePrice = Math.ceil(element.price * (100 - element.discount)/100)
+                element.dataValues.salePrice = Math.ceil(element.price * (100 - element.discount)/100000) * 1000
             else
                 element.dataValues.salePrice = element.dataValues.price
 
@@ -75,7 +75,7 @@ async function showById(request, response) {
         let element = queryResult;
             // Process Sale price
             if(element.dataValues.discount > 0)
-                element.dataValues.salePrice = Math.ceil(element.price * (100 - element.discount)/100)
+                element.dataValues.salePrice = Math.ceil(element.price * (100 - element.discount)/100000) * 1000
             else
                 element.dataValues.salePrice = element.dataValues.price
 
@@ -104,7 +104,7 @@ async function showByCategoryId(request, response) {
             let element = queryResult.rows[i];
             // Process Sale price
             if(element.dataValues.discount > 0)
-                element.dataValues.salePrice = Math.ceil(element.price * (100 - element.discount)/100)
+                element.dataValues.salePrice = Math.ceil(element.price * (100 - element.discount)/100000) * 1000
             else
                 element.dataValues.salePrice = element.dataValues.price
 
@@ -128,17 +128,12 @@ async function showSaleProducts(request, response) {
     try {
         const queryResult = await getListProduct(null,null,{isDiscount : true});
 
-        queryResult.rows.forEach(element => {
-            if(element.discount > 0)
-                element.price = Math.ceil(element.price * (100 - element.discount)/100)
-        });
-
         for(let i = 0 ; i < queryResult.rows.length;i++)
         {
             let element = queryResult.rows[i];
             // Process Sale price
             if(element.dataValues.discount > 0)
-                element.dataValues.salePrice = Math.ceil(element.price * (100 - element.discount)/100)
+                element.dataValues.salePrice = Math.ceil(element.price * (100 - element.discount)/100000) * 1000
             else
                 element.dataValues.salePrice = element.dataValues.price
 
@@ -169,8 +164,13 @@ async function showProductInfo(request, response)
                 message : "Can't find this product"
             })
 
-        if(queryResult.discount > 0)
-            queryResult.price = Math.ceil(queryResult.price * (100 - queryResult.discount)/100)
+        let element = queryResult;
+        // Process Sale price
+        if(element.dataValues.discount > 0)
+            element.dataValues.salePrice = Math.ceil(element.price * (100 - element.discount)/100000) * 1000
+        else
+            element.dataValues.salePrice = element.dataValues.price
+
         
         const queryProductDetail = await getDetailByProductById(productId)
         const queryProductImage = await getImageByProductById(productId)

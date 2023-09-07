@@ -64,9 +64,8 @@ async function add(request, response) {
             });
         }
 
-        const unitPrice =
-            productDetail.Product.price *
-            (1 - productDetail.Product.discount / 100);
+        const unitPrice = Math.ceil(productDetail.Product.price * (100 - productDetail.Product.discount)/100000) * 1000;
+        
         newCart["total_price"] = newCart.quantity * unitPrice;
 
         //Validate new Cart's data
