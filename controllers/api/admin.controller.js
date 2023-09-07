@@ -1,4 +1,5 @@
 const { showAllUser } = require("../CRUD/user");
+const { getBillById, updateBillById } = require("../CRUD/bill");
 
 const {
   showAllReview,
@@ -228,6 +229,38 @@ async function deleteFeedbackById(request, response) {
   }
 }
 
+async function updateBillStatus(request, response) {
+  try {
+    const billId = request.body.id;
+    const bill = await getBillById(billId);
+    const updateBill = {
+      ship_status: request.body.ship_status
+        ? request.body.ship_status
+        : bill.ship_status,
+      book_status: request.body.book_status
+        ? request.body.book_status
+        : bill.book_status,
+    };
+    updateBillById(updateBill, billId)
+      .then(() =>
+        response.status(200).json({
+          message: "Update bill successfull !",
+        })
+      )
+      .catch((error) => {
+        return response.status(401).json({
+          message: "Update failed!",
+          error: error,
+        });
+      });
+  } catch (error) {
+    return response.status(500).json({
+      message: "Something went wrong!",
+      error: error,
+    });
+  }
+}
+
 module.exports = {
   getAllUser: getAllUser,
   getAllReview: getAllReview,
@@ -236,4 +269,5 @@ module.exports = {
   deleteUserById: deleteUserById,
   deleteFeedbackById: deleteFeedbackById,
   updateFeedback: updateFeedback,
+  updateBillStatus: updateBillStatus,
 };
