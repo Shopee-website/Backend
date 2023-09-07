@@ -21,7 +21,7 @@ var imageNames = [];
 router.post('/', uploadImage("product_images", imageNames).array("images", 20), (req,res) => {
     req.body.images = imageNames
     ProductApiControllers.createNewProduct(req,res)
-    imageNames = []
+    imageNames.splice(0, imageNames.length);
 })
 
 router.patch('/:id', ProductApiControllers.updateById)
