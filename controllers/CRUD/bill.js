@@ -36,6 +36,34 @@ const include = [
     },
 ];
 
+async function index(startIndex, limit, params)
+{
+    const selection = objectCleaner.clean({
+        recipient_info : params.recipient_info ? { [Op.like]: `%${params.recipient_info}%` } : null,
+        user_id : params.user_id ? params.user_id : null,
+        payment_method : params.payment_method ? { [Op.like]: `%${params.payment_method}%` } : null,
+        transport_method : params.transport_method ? { [Op.like]: `%${params.transport_method}%` } : null,
+        book_status : params.book_status ? { [Op.like]: `%${params.book_status}%` } : null,
+        ship_status : params.ship_status ? { [Op.like]: `%${params.ship_status}%` } : null,
+    });
+
+    const orderBy = [
+        ["id", "ASC"],
+        ["user_id", "ASC"],
+        ["total_price", "DESC"],
+    ]
+    
+    return models.Bill.findAndCountAll(
+        objectCleaner.clean({
+            include: include,
+            offset: Number.isNaN(startIndex) ? null : startIndex,
+            limit: Number.isNaN(limit) ? null : limit,
+            order: orderBy,
+            where: selection,
+        })
+    );
+}
+
 async function showByUserId(userId, startIndex, limit) {
     return models.Bill.findAndCountAll(
         objectCleaner.clean({
@@ -77,6 +105,7 @@ async function destroy(id) {
 
 module.exports = {
     getBillById: showById,
+    getListBill : index,
     addNewBill: create,
     updateBillById: update,
     softDeleteBillById: destroy,
