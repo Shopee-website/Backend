@@ -60,4 +60,10 @@ router.delete(
   adminController.deleteFeedbackById
 );
 
+router.patch(
+  "/update-bill-status",
+  checkRoleMiddleware.checkRoleAdmin,
+  adminController.updateBillStatus
+);
+
 module.exports = router;
