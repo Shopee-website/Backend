@@ -197,13 +197,13 @@ async function updateBill(request, response) {
     try {
         const billId = request.params.id;
         const dbBill = await getBillById(billId);
+        
 
         if (dbBill) {
             const updateBill = {
                 recipient_info: request.body.recipient_info
                     ? request.body.recipient_info
                     : dbBill.recipient_info,
-                user_id: decode.id,
                 payment_method: request.body.payment_method
                     ? request.body.payment_method
                     : dbBill.payment_method,
@@ -232,14 +232,8 @@ async function updateBill(request, response) {
                     ? request.body.total_price
                     : dbBill.total_price,
             };
+            console.log(updateBill)
 
-            const validateResponse = validators.validateBill(updateBill);
-
-            if (validateResponse !== true)
-                return response.status(400).json({
-                    message: "validated failed!",
-                    error: validateResponse,
-                });
 
             updateBillById(updateBill, billId).then(() =>
                 response.status(200).json({
