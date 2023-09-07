@@ -50,7 +50,7 @@ async function updateAva(request, response) {
 
         const userID = decode.id;
 
-        if (request.body.image)
+        if (!request.body.image)
             return response.status(401).json({
                 message: "Can't find photo to change",
             });
