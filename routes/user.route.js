@@ -9,7 +9,7 @@ const router = express.Router();
 router.get(
   "/profile",
   checkRoleMiddleware.checkRoleUser,
-  userController.getUserById
+  userController.getUserByToken
 );
 
 var imageNames = [];
