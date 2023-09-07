@@ -18,8 +18,12 @@ router.patch(
   checkRoleMiddleware.checkRoleUser,
   uploadImage("avatars", imageNames).array("images", 1),
   (req, res) => {
-    req.body.image = imageNames[imageNames.length - 1];
+    
+    req.body.image = imageNames[0];
+
     userController.updateAva(req, res);
+
+    imageNames.splice(0, imageNames.length);
   }
 );
 
