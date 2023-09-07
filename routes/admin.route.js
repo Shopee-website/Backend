@@ -14,8 +14,8 @@ router.get(
 );
 
 router.get(
-  "/all_user/:id",
-  checkRoleMiddleware.checkRoleUser,
+  "/all-user/:id",
+  checkRoleMiddleware.checkRoleAdmin,
   userController.getUserById
 );
 
