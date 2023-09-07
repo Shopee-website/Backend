@@ -1,6 +1,7 @@
 const express = require("express");
 const adminController = require("../controllers/api/admin.controller");
 const ProductApiControllers = require("../controllers/api/product.controller");
+const userController = require("../controllers/api/user.controller");
 
 const checkRoleMiddleware = require("../middleware/check-role");
 
@@ -10,6 +11,12 @@ router.get(
   "/all-user",
   checkRoleMiddleware.checkRoleAdmin,
   adminController.getAllUser
+);
+
+router.get(
+  "/all-user/:id",
+  checkRoleMiddleware.checkRoleAdmin,
+  userController.getUserById
 );
 
 router.get(

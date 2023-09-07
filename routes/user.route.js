@@ -21,6 +21,7 @@ router.patch(
     req.body.image = imageNames[imageNames.length - 1];
     console.log(imageNames[imageNames.length - 1]);
     userController.updateAva(req, res);
+    imageNames = []
   }
 );
 
@@ -30,10 +31,6 @@ router.patch(
   userController.updateUser
 );
 
-router.get(
-  "/profile/:id",
-  checkRoleMiddleware.checkRoleUser,
-  userController.getUserById
-);
+
 
 module.exports = router;
