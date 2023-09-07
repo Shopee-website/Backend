@@ -18,7 +18,7 @@ router.patch(
   checkRoleMiddleware.checkRoleUser,
   uploadImage("avatars", imageNames).array("images", 1),
   (req, res) => {
-
+    
     req.body.image = imageNames[0];
 
     userController.updateAva(req, res);
@@ -32,7 +32,5 @@ router.patch(
   checkRoleMiddleware.checkRoleUser,
   userController.updateUser
 );
-
-
 
 module.exports = router;
