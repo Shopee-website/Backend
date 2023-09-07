@@ -4,16 +4,13 @@ const {
     addNewBill,
     getBillById,
     getBillByUserId,
+    getListBill,
     softDeleteBillById,
     updateBillById,
 } = require("../CRUD/bill");
 
 const {
     addNewBillDetail,
-    getBillDetailByBillId,
-    getBillDetailById,
-    softDeleteBillDetailById,
-    updateBillDetailById,
     getBillDetailByUserId,
 } = require("../CRUD/billDetail");
 const jwt = require("jsonwebtoken");
@@ -39,6 +36,38 @@ async function getByUserId(request, response) {
             });
         }
         return response.status(200).json(dbBill);
+    } catch (error) {
+        return response.status(500).json({
+            message: "Something went wrong!",
+            error: error,
+        });
+    }
+}
+
+async function showListBill(request, response)
+{
+    try {
+        const page = Number.parseInt(request.query.page);
+        const limit = Number.parseInt(request.query.limit);
+
+        const startIndex = (page - 1) * limit;
+        
+        console.log(startIndex)
+
+        const params = {
+            recipient_info : request.body.recipient_info ? request.body.recipient_info : null,
+            user_id : request.body.user_id ? request.body.user_id : null,
+            payment_method : request.body.payment_method ? request.body.payment_method : null,
+            transport_method : request.body.transport_method ? request.body.transport_method : null,
+            book_status : request.body.book_status ? request.body.book_status : null,
+            ship_status : request.body.ship_status ? request.body.ship_status : null,
+        }
+
+        
+        const queryResult = await getListBill(startIndex, limit, params);
+        
+        queryResult.count = queryResult.rows.length
+        return response.status(200).json(queryResult);
     } catch (error) {
         return response.status(500).json({
             message: "Something went wrong!",
@@ -258,6 +287,7 @@ async function deleteById(request, response) {
 module.exports = {
     getByUserId: getByUserId,
     getBillDetailByUserId: showBillDetailByUserId,
+    getListBillAdmin : showListBill,
     addBill: addBill,
     updateBill: updateBill,
     deleteById: deleteById,
