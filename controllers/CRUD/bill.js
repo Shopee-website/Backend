@@ -34,6 +34,10 @@ const include = [
             },
         ],
     },
+    {
+        model : models.User,
+        require : true,
+    }
 ];
 
 async function index(startIndex, limit, params)
