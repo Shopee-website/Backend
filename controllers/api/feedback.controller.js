@@ -31,7 +31,10 @@ async function create(request, response) {
     let hasMatchingProduct = false;
     for (const bill of userBill.Bills) {
       for (const billDetail of bill.BillDetails) {
-        if (billDetail.ProductDetail.Product.id === newFeedBack.product_id) {
+        if (
+          billDetail.ProductDetail.Product.id === newFeedBack.product_id &&
+          bill.ship_status === "Thành công"
+        ) {
           hasMatchingProduct = true;
           break; // Nếu tìm thấy sự trùng khớp, bạn có thể thoát ra khỏi vòng lặp để tiết kiệm thời gian
         }
