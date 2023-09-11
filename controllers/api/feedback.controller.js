@@ -1,5 +1,6 @@
 const { addNewFeedBack } = require("../CRUD/feedback");
 const { getAllByProctId } = require("../CRUD/feedback");
+const { showUserBill } = require("../CRUD/user");
 const validators = require("../../helpers/validators");
 const jwt = require("jsonwebtoken");
 async function create(request, response) {
@@ -25,18 +26,41 @@ async function create(request, response) {
       });
     }
 
-    // Add new feedback to database
-    addNewFeedBack(newFeedBack)
-      .then(() => {
-        return response.status(200).json({
-          message: "Create feedback successfully!",
+    const userBill = await showUserBill(decode.id);
+    // console.log(userBill.Bills[0].BillDetails[0].ProductDetail.Product);
+    let hasMatchingProduct = false;
+    for (const bill of userBill.Bills) {
+      for (const billDetail of bill.BillDetails) {
+        if (billDetail.ProductDetail.Product.id === newFeedBack.product_id) {
+          hasMatchingProduct = true;
+          break; // Nếu tìm thấy sự trùng khớp, bạn có thể thoát ra khỏi vòng lặp để tiết kiệm thời gian
+        }
+      }
+
+      if (hasMatchingProduct) {
+        break; // Nếu tìm thấy sự trùng khớp trong BillDetails, bạn có thể thoát ra khỏi vòng lặp tổng cộng
+      }
+    }
+
+    if (hasMatchingProduct) {
+      addNewFeedBack(newFeedBack)
+        .then(() => {
+          return response.status(200).json({
+            message: "Create feedback successfully!",
+          });
+        })
+        .catch(() => {
+          return response.status(401).json({
+            message: "Create feedback fail!",
+          });
         });
-      })
-      .catch(() => {
-        return response.status(401).json({
-          message: "Create feedback fail!",
-        });
+    } else {
+      return response.status(402).json({
+        message: "User has not purchased this product!",
       });
+    }
+
+    // Add new feedback to database
   } catch (error) {
     return response.status(500).json({
       message: "Something went wrong!",
