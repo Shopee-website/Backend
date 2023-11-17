@@ -21,7 +21,7 @@ module.exports = {
                 },
                 {
                     name: "Thiết bị điện tử",
-                    image: process.env.WEB_URL + "/images/categories/electronic_device.png",
+                    image: process.env.WEB_URL + "/images/categories/Electronic_device.png",
                 },
                 {
                     name: "Máy tính & laptop",
